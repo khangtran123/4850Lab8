@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Document   : classSchedule.dtd
+    Created on : March 03, 2016, 11:18 PM
+    Author     : Khang Tran
+    Description:
+        This is the core structure of our winter 2016 
+        timetable 
+-->
+
+
+<!-- TODO define your own vocabulary/syntax. Example follows:  -->
+<!ELEMENT __ROOT__ ANY>
+<!ATTLIST __ROOT__ version CDATA #REQUIRED>
+
