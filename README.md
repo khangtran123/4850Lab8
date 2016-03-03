@@ -10,6 +10,7 @@ Team Members
 ************
 Khang Tran - Acknowledged  
 Mark Batin 
+Johnny Kang
 
 ******************
 Coding Conventions
