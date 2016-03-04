@@ -9,7 +9,32 @@
 -->
 
 
-<!-- TODO define your own vocabulary/syntax. Example follows:  -->
-<!ELEMENT __ROOT__ ANY>
-<!ATTLIST __ROOT__ version CDATA #REQUIRED>
+<!-- The root element contains a week element, and then multiple source elements,
+each of which models data from a specific course.
+ -->
+<!ELEMENT schedule (week,source+)>
+
+<!-- The week element gives us the current week of schedule 
+-->
+<!ELEMENT week (#PCDATA)>
+
+<!-- The source element contains a courseID element -->
+<!ELEMENT source (course)>
+
+<!-- The course element contains a courseID, className, and classLocation
+elements
+-->
+<!ELEMENT course (courseID, className, classLocation)>
+
+<!ELEMENT courseID (#PCDATA)>
+<!ELEMENT className (#PCDATA)>
+<!ELEMENT classLocation (#PCDATA)>
+
+ 
+
+
+
+
+
+ 
 
