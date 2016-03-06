@@ -12,11 +12,11 @@
 <!-- The root element contains a week element, and then multiple source elements,
 each of which models data from a specific course.
  -->
-<!ELEMENT schedule (week,source+)>
+<!ELEMENT schedule (semester,source+)>
 
-<!-- The week element gives us the current week of schedule 
+<!-- The semester element gives us the current week of schedule 
 -->
-<!ELEMENT week (#PCDATA)>
+<!ELEMENT semester (#PCDATA)>
 
 <!-- The source element contains a courseID element -->
 <!ELEMENT source (course)>
@@ -24,13 +24,20 @@ each of which models data from a specific course.
 <!-- The course element contains a courseID, className, and classLocation
 elements
 -->
-<!ELEMENT course (courseID, className, classLocation)>
+<!ELEMENT course (day, time, courseID, className, classLocation, classActivity)>
 
+<!ELEMENT day (#PCDATA)>
+<!ELEMENT time (#PCDATA)>
 <!ELEMENT courseID (#PCDATA)>
 <!ELEMENT className (#PCDATA)>
 <!ELEMENT classLocation (#PCDATA)>
+<!ELEMENT classActivity (#PCDATA)>
 
- 
+<!ATTLIST course
+    class (1|2|3|4|5|6) #REQUIRED
+>
+
+
 
 
 
