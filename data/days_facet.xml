@@ -13,7 +13,8 @@
     <semester>Winter 2016 Semester: Week of March 21, 2016</semester>
     <days> 
         <daySchedule day ="Monday"> 
-            <timeslot start = "1:30" finish="3:30">
+            <timeslot>
+                <time start = "1:30" finish="3:30"></time>
                 <course>
                     <courseID></courseID>
                     <className></className>
