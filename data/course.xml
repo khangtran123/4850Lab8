@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<timeslot>
+    <course>
+        <courseID>ACIT 4850</courseID>
+        <className>Integrative Programming and Technologies</className>
+        <classLocation>SW3-1750</classLocation>
+        <classActivity activity="lecture"/>
+    </course>
+    <course>
+        <courseID>ACIT 4850</courseID>
+        <className>Integrative Programming and Technologies</className>
+        <classLocation>SE12-320</classLocation>
+        <classActivity activity="lab"/>    
+    </course>
+    <course>
+        <courseID>ACIT 4770</courseID>
+        <className>Legal and Ethic Issues in IT</className>
+        <classLocation>SE12-306</classLocation>
+        <classActivity activity="tutorial"/>
+    </course>
+    <course>
+        <courseID>ACIT 4620</courseID>
+        <className>Enterprise Systems Administration</className>
+        <classLocation>SE12-306</classLocation>
+        <classActivity activity="lab"/>
+    </course>
+    <course>
+        <courseID>ACIT 4620</courseID>
+        <className>Enterprise Systems Administration</className>
+        <classLocation>SW3-3615</classLocation>
+        <classActivity activity="lecture"/>
+    </course>
+</timeslot>
