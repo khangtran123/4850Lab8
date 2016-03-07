@@ -5,36 +5,49 @@
     Author     : Khang Tran
     Description:
         This is the core structure of our winter 2016 
-        timetable 
+        timetable. A semester can have as many days elements, each days element 
+        contains a timeslot and each timeslot can have one course. 
 -->
 
 
 <!-- The root element contains a week element, and then multiple source elements,
 each of which models data from a specific course.
  -->
-<!ELEMENT schedule (semester,source+)>
+<!ELEMENT schedule (semester,days)>
 
 <!-- The semester element gives us the current week of schedule 
 -->
 <!ELEMENT semester (#PCDATA)>
 
-<!-- The source element contains a courseID element -->
-<!ELEMENT source (course)>
+<!-- The days element contains a daySchedule child element (1 or more) -->
+<!ELEMENT days (daySchedule+)>
+
+<!-- The daySchedule element contains a daySchedule child element (1 or more) -->
+<!ELEMENT daySchedule (timeslot*)>
+<!ATTLIST daySchedule
+    day (Monday|Tuesday|Wednesday|Thursday|Friday) #REQUIRED
+>
+
+<!ELEMENT timeslot (time, course)>
+
+<!ELEMENT time (#PCDATA)>
+<!ATTLIST time
+    start CDATA #REQUIRED
+    finish CDATA #REQUIRED
+>
 
 <!-- The course element contains a courseID, className, and classLocation
 elements
 -->
-<!ELEMENT course (day, time, courseID, className, classLocation, classActivity)>
+<!ELEMENT course (courseID, className, classLocation, classActivity)>
 
-<!ELEMENT day (#PCDATA)>
-<!ELEMENT time (#PCDATA)>
 <!ELEMENT courseID (#PCDATA)>
 <!ELEMENT className (#PCDATA)>
 <!ELEMENT classLocation (#PCDATA)>
 <!ELEMENT classActivity (#PCDATA)>
 
-<!ATTLIST course
-    class (1|2|3|4|5|6) #REQUIRED
+<!ATTLIST classActivity
+    activity (lab|lecture|tutorial) #REQUIRED
 >
 
 
