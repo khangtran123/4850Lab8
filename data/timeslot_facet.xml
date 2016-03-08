@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE timeslots SYSTEM "classSchedule.dtd">
+
+<timeslots>
+    <timeslot>
+        <time start="13:30" finish="15:30"></time>
+        <course>
+            <courseID id="4770"></courseID>
+            <className></className>
+            <classLocation></classLocation>
+            <classActivity activity="tutorial"></classActivity>
+        </course>
+    </timeslot>
+    <timeslot>
+        <time start="10:30" finish="12:30"></time>
+        <course>
+            <courseID id="4620"></courseID>
+            <className></className> 
+            <classLocation></classLocation>
+            <classActivity activity="lab"></classActivity>
+        </course>
+    </timeslot>
+    <timeslot>
+        <time start="15:30" finish="17:30"></time>
+        <course>
+            <courseID id="4620"></courseID>
+            <className></className> 
+            <classLocation></classLocation>
+            <classActivity activity="lecture"></classActivity>
+        </course>
+    </timeslot>
+    <timeslot>
+        <time start="12:30" finish="14:30"></time>
+        <course>
+            <courseID id="4850"></courseID>
+            <className></className>
+            <classLocation></classLocation>
+            <classActivity activity="lecture"></classActivity>
+        </course>
+    </timeslot>
+    <timeslot>
+        <time start="10:30" finish="12:30"></time>
+        <course>
+            <courseID id="4850"></courseID>
+            <className></className>
+            <classLocation></classLocation>
+            <classActivity activity="lab"></classActivity>
+        </course>
+    </timeslot>
+</timeslots>

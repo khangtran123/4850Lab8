@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE schedule SYSTEM "classSchedule.dtd">
+<!DOCTYPE days SYSTEM "classSchedule.dtd">
 <!--
     Document   : days_facet.xml
     Created on : March 06, 2016
@@ -8,20 +8,62 @@
         The days of of the week of our winter 2016 class schedule. This xml 
         document displays the days of the week from Monday-Friday
 -->
-
-<schedule>
-    <semester>Winter 2016 Semester: Week of March 21, 2016</semester>
     <days> 
         <daySchedule day ="Monday"> 
             <timeslot>
-                <time start = "1:30" finish="3:30"></time>
+                <time></time>
                 <course>
-                    <courseID></courseID>
+                    <courseID id="4770"></courseID>
                     <className></className>
                     <classLocation></classLocation>
-                    <classActivity activity="tutorial"></classActivity>
+                    <classActivity></classActivity>
+                </course>
+            </timeslot>
+        </daySchedule>
+        <daySchedule day ="Tuesday"> 
+            <timeslot>
+                <time></time>
+                <course>
+                    <courseID id="4620"></courseID>
+                    <className></className>
+                    <classLocation></classLocation>
+                    <classActivity activity="lab"></classActivity>
+                </course>
+            </timeslot>
+            <timeslot>
+                <time></time>
+                <course>
+                    <courseID id="4620"></courseID>
+                    <className></className>
+                    <classLocation></classLocation>
+                    <classActivity activity="lecture"></classActivity>
+                </course>
+            </timeslot>
+        </daySchedule> 
+        <daySchedule day ="Wednesday"> 
+            <timeslot>
+                <time></time>
+                <course>
+                    <courseID id="4850"></courseID>
+                    <className></className>
+                    <classLocation></classLocation>
+                    <classActivity activity = "lecture"></classActivity>
                 </course>
             </timeslot>
         </daySchedule>  
+        <daySchedule day ="Thursday"> 
+            <timeslot>
+                <time></time>
+                <course>
+                    <courseID id="4850"></courseID>
+                    <className></className>
+                    <classLocation></classLocation>
+                    <classActivity activity="lab"></classActivity>
+                </course>
+            </timeslot>
+        </daySchedule> 
+        <daySchedule day ="Friday"> 
+        </daySchedule> 
     </days>
-</schedule>
+
+

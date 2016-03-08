@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE schedule SYSTEM "classSchedule.dtd">
 <!--
     Document   : masterPage.xml
     Created on : March 06, 2016
@@ -8,10 +7,12 @@
         This is the master page that holds all the entities created in the data
         folder and applies all three facets into a table "schedule
 -->
+<!DOCTYPE schedule SYSTEM "classSchedule.dtd"[
 
-<!ENTITY days SYSTEM "days_faucet.xml">
+<!ENTITY days SYSTEM "days_facet.xml">
 <!ENTITY timeslot SYSTEM "timeslots_facet.xml">
-<!ENTITY course SYSTEM "courses_faucet.xml">
+<!ENTITY course SYSTEM "courses.xml">
+]>
 
 <schedule>
     &days; 
