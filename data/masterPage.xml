@@ -10,7 +10,7 @@
 <!DOCTYPE schedule SYSTEM "classSchedule.dtd"[
 
 <!ENTITY days SYSTEM "days_facet.xml">
-<!ENTITY timeslot SYSTEM "timeslots_facet.xml">
+<!ENTITY timeslot SYSTEM "timeslot_facet.xml">
 <!ENTITY course SYSTEM "courses.xml">
 ]>
 
