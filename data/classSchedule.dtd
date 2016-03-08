@@ -13,14 +13,17 @@
 <!-- The root element contains a week element, and then multiple source elements,
 each of which models data from a specific course.
  -->
-<!ELEMENT schedule (semester,days)>
-
-<!-- The semester element gives us the current week of schedule 
--->
-<!ELEMENT semester (#PCDATA)>
+<!ELEMENT schedule (days,timeslots,courses)>
 
 <!-- The days element contains a daySchedule child element (1 or more) -->
 <!ELEMENT days (daySchedule+)>
+
+<!-- The timeslots element contains all the course timeslots of the week -->
+<!ELEMENT timeslots (timeslot+)>
+
+<!-- The courses element contains all the courses that we are enrolled in -->
+<!ELEMENT courses (course+)>
+
 
 <!-- The daySchedule element contains a daySchedule child element (1 or more) -->
 <!ELEMENT daySchedule (timeslot*)>
@@ -32,8 +35,8 @@ each of which models data from a specific course.
 
 <!ELEMENT time (#PCDATA)>
 <!ATTLIST time
-    start CDATA #REQUIRED
-    finish CDATA #REQUIRED
+    start CDATA #IMPLIED 
+    finish CDATA #IMPLIED 
 >
 
 <!-- The course element contains a courseID, className, and classLocation
@@ -46,9 +49,13 @@ elements
 <!ELEMENT classLocation (#PCDATA)>
 <!ELEMENT classActivity (#PCDATA)>
 
-<!ATTLIST classActivity
-    activity (lab|lecture|tutorial) #REQUIRED
+<!ATTLIST courseID
+    id (4850|4770|4620) #REQUIRED
 >
+<!ATTLIST classActivity
+    activity (lab|lecture|tutorial) #IMPLIED
+>
+
 
 
 
