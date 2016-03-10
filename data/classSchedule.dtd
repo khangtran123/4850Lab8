@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-    Document   : classSchedule.dtd
-    Created on : March 03, 2016, 11:18 PM
-    Author     : Khang Tran
-    Description:
         This is the core structure of our winter 2016 
         timetable. A semester can have as many days elements, each days element 
         contains a timeslot and each timeslot can have one course. 
@@ -15,45 +11,40 @@ each of which models data from a specific course.
  -->
 <!ELEMENT schedule (days,timeslots,courses)>
 
-<!-- The days element contains a daySchedule child element (1 or more) -->
-<!ELEMENT days (daySchedule+)>
+<!-- Element Booking is used in all 3 facets. -->
+<!ELEMENT booking EMPTY>
+<!ATTLIST booking
+    day (Monday|Tuesday|Wednesday|Thursday|Friday) #IMPLIED
+    startTime CDATA #IMPLIED
+    endTime CDATA #IMPLIED
+    instructor CDATA #IMPLIED
+    classActivity (Lecture|Tutorial|Lab) #REQUIRED
+    classLocation CDATA #REQUIRED
+>
 
 <!-- The timeslots element contains all the course timeslots of the week -->
-<!ELEMENT timeslots (timeslot+)>
-
-<!-- The courses element contains all the courses that we are enrolled in -->
-<!ELEMENT courses (course+)>
-
-
-<!-- The daySchedule element contains a daySchedule child element (1 or more) -->
-<!ELEMENT daySchedule (timeslot*)>
-<!ATTLIST daySchedule
-    day (Monday|Tuesday|Wednesday|Thursday|Friday) #REQUIRED
+<!ELEMENT timeslots (timeslot)*>
+<!ELEMENT timeslot (booking)*>
+<!ATTLIST timeslot 
+    time (8:30|9:30|11:30|12:30|1:30|2:30|3:30|4:30) #REQUIRED
 >
 
-<!ELEMENT timeslot (time, course)>
+<!--- Root element for days facet. -->
+<!ELEMENT days (day)*>
 
-<!ELEMENT time (#PCDATA)>
-<!ATTLIST time
-    start CDATA #IMPLIED 
-    finish CDATA #IMPLIED 
+<!--- Day element for days of the week. -->
+<!ELEMENT day (booking)*>
+<!ATTLIST day
+    daySchedule (Monday|Tuesday|Wednesday|Thursday|Friday) #REQUIRED
 >
 
-<!-- The course element contains a courseID, className, and classLocation
-elements
--->
-<!ELEMENT course (courseID, className, classLocation, classActivity)>
+<!-- Root courses element for courses facet.-->  
+<!ELEMENT courses (course)*>
 
-<!ELEMENT courseID (#PCDATA)>
-<!ELEMENT className (#PCDATA)>
-<!ELEMENT classLocation (#PCDATA)>
-<!ELEMENT classActivity (#PCDATA)>
-
-<!ATTLIST courseID
-    id (4850|4770|4620) #REQUIRED
->
-<!ATTLIST classActivity
-    activity (lab|lecture|tutorial) #IMPLIED
+<!--- Element course contains course and its data. -->
+<!ELEMENT course (booking)*>
+<!ATTLIST course
+    courseID (4620|4650|4660|4770|4850|4910) #IMPLIED
 >
 
 

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE courses SYSTEM "classSchedule.dtd">
+
+
+<!-- This is the facet structure for all the courses we want displayed -->
+<courses>
+    <course courseID="4620">
+        <booking day="Tuesday" startTime="10:30" endTime="12:20" instructor="Bethany" classActivity="Lab" classLocation="SE12-306" />
+        <booking day="Tuesday" startTime="3:30" endTime="5:20" instructor="Bethany" classActivity="Lecture" classLocation="SW3-3615" />
+    </course>
+    <course courseID="4650">
+        <booking day="Monday" startTime="4:30" endTime="5:20" instructor="Medhat" classActivity="Lecture" classLocation="SE6-205" />
+        <booking day="Tuesday" startTime="12:30" endTime="1:20" instructor="Medhat" classActivity="Lecture" classLocation="SW9-206" />
+        <booking day="Tuesday" startTime="1:30" endTime="3:20" instructor="Medhat" classActivity="Lab" classLocation="SE12-306" />
+    </course>
+    <course courseID="4660">
+        <booking day="Wednesday" startTime="10:30" endTime="12:20" instructor="Steve" classActivity="Lab" classLocation="SE12-306" />
+        <booking day="Friday" startTime="8:30" endTime="10:20" instructor="Steve" classActivity="Lecture" classLocation="SW9-206" />
+    </course>
+    <course courseID="4770">
+        <booking day="Monday" startTime="1:30" endTime="3:20" instructor="Trevor" classActivity="Tutorial" classLocation="SE12-306" />
+    </course>
+    <course courseID="4850">
+        <booking day="Wednesday" startTime="12:30" endTime="2:20" instructor="Jim" classActivity="Lecture" classLocation="SW3-1750" />
+        <booking day="Thursday" startTime="10:30" endTime="12:20" instructor="Jim" classActivity="Lab" classLocation="SE12-320" />
+    </course>
+    <course courseID="4910">
+        <booking day="Monday" startTime="3:30" endTime="4:20" instructor="Richard" classActivity="Lecture" classLocation="SW9-206" />
+        <booking day="Thursday" startTime="9:30" endTime="10:20" instructor="Richard" classActivity="Lecture" classLocation="SW5-1840" />
+        <booking day="Thursday" startTime="1:30" endTime="3:20" instructor="Richard" classActivity="Lab" classLocation="SE12-306" />
+    </course>
+</courses>
