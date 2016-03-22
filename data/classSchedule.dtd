@@ -9,7 +9,7 @@
 <!-- The root element contains a week element, and then multiple source elements,
 each of which models data from a specific course.
  -->
-<!ELEMENT schedule ((courses|days|timeslots)+)>
+<!ELEMENT schedule (courses|days|timeslots)*>
 
 <!-- Element Booking is used in all 3 facets. -->
 <!ELEMENT booking EMPTY>
@@ -23,11 +23,12 @@ each of which models data from a specific course.
     classLocation CDATA #REQUIRED
 >
 
-<!-- The timeslots element contains all the course timeslots of the week -->
-<!ELEMENT timeslots (timeslot)*>
-<!ELEMENT timeslot (booking)*>
-<!ATTLIST timeslot 
-    time (8:30|9:30|10:30|11:30|12:30|1:30|2:30|3:30|4:30) #REQUIRED
+<!-- Root courses element for courses facet.-->  
+<!ELEMENT courses (course)*>
+<!--- Element course contains course and its data. -->
+<!ELEMENT course (booking)*>
+<!ATTLIST course
+    courseID (4620|4650|4660|4770|4850|4910) #IMPLIED
 >
 
 <!--- Root element for days facet. -->
@@ -39,14 +40,19 @@ each of which models data from a specific course.
     daySchedule (Monday|Tuesday|Wednesday|Thursday|Friday) #REQUIRED
 >
 
-<!-- Root courses element for courses facet.-->  
-<!ELEMENT courses (course)*>
-
-<!--- Element course contains course and its data. -->
-<!ELEMENT course (booking)*>
-<!ATTLIST course
-    courseID (4620|4650|4660|4770|4850|4910) #IMPLIED
+<!-- The timeslots element contains all the course timeslots of the week -->
+<!ELEMENT timeslots (timeslot)*>
+<!ELEMENT timeslot (booking)*>
+<!ATTLIST timeslot 
+    time (8:30|9:30|10:30|11:30|12:30|1:30|2:30|3:30|4:30) #REQUIRED
 >
+
+
+
+
+
+
+
 
 
 
