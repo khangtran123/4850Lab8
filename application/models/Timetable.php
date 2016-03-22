@@ -82,4 +82,5 @@ class Timetable extends CI_Model {
     public function getDay() {
         return $this->days;
     }
+    
 }
