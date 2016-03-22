@@ -9,12 +9,13 @@
 <!-- The root element contains a week element, and then multiple source elements,
 each of which models data from a specific course.
  -->
-<!ELEMENT schedule (days,timeslots,courses)>
+<!ELEMENT schedule ((courses|days|timeslots)+)>
 
 <!-- Element Booking is used in all 3 facets. -->
 <!ELEMENT booking EMPTY>
 <!ATTLIST booking
-    day (Monday|Tuesday|Wednesday|Thursday|Friday) #IMPLIED
+    courseName (4620|4650|4660|4770|4850|4910) #REQUIRED
+    weekDay (Monday|Tuesday|Wednesday|Thursday|Friday) #IMPLIED
     startTime CDATA #IMPLIED
     endTime CDATA #IMPLIED
     instructor CDATA #IMPLIED
