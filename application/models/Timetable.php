@@ -8,16 +8,30 @@
 
 class Timetable extends CI_Model {
 
-    protected $xml = null;
+    protected $schedule = null;
     protected $timeslots = array();
     protected $courses = array();
     protected $days = array();
+    
+    //dropdowns for days of the week, and for timeslots
+    protected $dowDropdown = array();
+    protected $timeslotDropdown = array(); 
 
 // Constructor
     public function __construct() {
         parent::__construct();
-        $this->xml = simplexml_load_file(DATAPATH . 'master.xml');
-
+        $this->schedule = simplexml_load_file(DATAPATH . 'master.xml');
+        
+        //fills the dropdown with a list of days
+        foreach($this->schedule->days as $dayItem){
+            $this->dowDropdown = $dayItem; 
+        }
+        
+        //fills the dropdown with a list of timeslots
+        foreach($this->schedule->timeslots as $timeslotItem){
+            $this->timeslotDropdown = $timeslotItem; 
+        }
+        
         //list full of timeslot
         foreach ($this->xml->timeslots->timeslot as $timeslot) {
             $time = (string) $timeslot['startTime'];
@@ -71,7 +85,7 @@ class Timetable extends CI_Model {
     }
 
     public function getTimeslot() {
-        return $this->timeslots;
+        return $this->timeslotDropdown;
     }
 
     public function getCourse() {
@@ -79,12 +93,12 @@ class Timetable extends CI_Model {
     }
 
     public function getDay() {
-        return $this->days;
+        return $this->dowDropdown;
     }
 
 }
 
-class Booking {
+class Booking extends CI_Model {
 
     public $courseID;
     public $weekDay;
