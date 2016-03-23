@@ -85,7 +85,11 @@ class Timetable extends CI_Model {
     }
 
     public function getTimeslot() {
-        return $this->timeslotDropdown;
+        return $this->timeslots;
+    }
+    
+    public function getTimeslotDropdown(){
+        return $this->timeslotDropdown; 
     }
 
     public function getCourse() {
@@ -94,6 +98,10 @@ class Timetable extends CI_Model {
 
     public function getDay() {
         return $this->dowDropdown;
+    }
+    
+    public function getDayDropdown(){
+        return $this->dowDropdown; 
     }
 
 }
